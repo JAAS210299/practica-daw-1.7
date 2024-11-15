@@ -22,7 +22,7 @@ rm -rf /var/www/html/*
 # El contenido se ha descomprimido en una carpeta que se llama wordpress. Ahora, movemos el contenido de /tpm/wordpress a /var/www/html.
 mv -f /tmp/wordpress/* /var/www/html
 
-# reamos la base de datos y el usuario para WordPress.
+# Creamos la base de datos y el usuario para WordPress.
 mysql -u root <<< "DROP DATABASE IF EXISTS $WORDPRESS_DB_NAME"
 mysql -u root <<< "CREATE DATABASE $WORDPRESS_DB_NAME"
 mysql -u root <<< "DROP USER IF EXISTS $WORDPRESS_DB_USER@$IP_CLIENTE_MYSQL"
